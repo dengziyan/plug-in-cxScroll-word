@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>图片或文字走马灯</title>
+  <link rel="stylesheet" href="css/liMarquee.css">
+  <style>
+    *{margin: 0;padding:0;}
+    .box2{width: 300px;height: 100px;overflow: hidden;position: relative;}
+    .box2 img{height: 100px;width: 200px;}
+  </style>
+</head>
+<body>
+  <div class="box2"> 
+    <div class="run2">
+        <img src="https://img2.baidu.com/it/u=3744598050,4191464688&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1663779600&t=ede9930febd27560f66770682aeebaba" alt="">
+        <img src="https://img1.baidu.com/it/u=724179003,4096104503&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1663779600&t=7c497e37c47dad34381b60c972a9eaef" alt="">
+        <span>哈哈哈哈哈啊啊啊啊啊啊啊啊啊啊啊</span>
+      </div>
+
+  </div>
+
+    
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery.liMarquee.js"></script>
+  <script>
+    $('.run2').liMarquee({
+      direction:'left', // 滚动方向，可选'left','right','up','down'
+      loop: -1, // 循环次数，-1为无限循环
+      scrolldelay: 0, // 每次重复之前的延迟
+      scrollamount: 50, // 滚动速度，越大越快
+      circular:true, // 无缝滚动
+      drag:true, // 鼠标可拖动
+      runshort: true, //内容不足是否滚动 
+      hoverstop:true, // 鼠标悬停暂停
+      inverthover:false, // true即默认的时候不滚动，鼠标悬停才滚动
+      xml:false 
+      
+    });
+  </script>
+</body>
+</html>
